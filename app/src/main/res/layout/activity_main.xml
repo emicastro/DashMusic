@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/ivLoginLogo"
-        android:layout_width="130dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/width_logo"
+        android:layout_height="@dimen/height_logo"
         android:src="@drawable/ic_launcher_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +20,6 @@
         style="@style/AppTheme.EditTextStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="12dp"
         android:drawableStart="@drawable/vector_person"
         android:hint="@string/hint_user"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,18 +31,31 @@
         style="@style/AppTheme.EditTextStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="12dp"
         android:drawableStart="@drawable/vector_lock"
         android:hint="@string/hint_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etLoginUsername" />
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/vector_person"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
     <Button
         android:id="@+id/button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="12dp"
+        android:layout_margin="@dimen/margin_default"
         android:background="@color/colorPrimary"
         android:text="@string/button_login"
         app:layout_constraintBottom_toBottomOf="parent"
